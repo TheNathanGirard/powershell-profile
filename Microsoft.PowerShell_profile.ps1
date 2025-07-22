@@ -287,7 +287,7 @@ else {
 }
 # Quick Access to Editing the Profile
 function Edit-Profile {
-    vim $PROFILE.CurrentUserAllHosts
+    vim $PROFILE
 }
 Set-Alias -Name ep -Value Edit-Profile
 
