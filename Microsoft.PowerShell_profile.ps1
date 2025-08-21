@@ -60,7 +60,7 @@ if ($repo_root_Override) {
     $repo_root = $repo_root_Override
 }
 else {
-    $repo_root = "https://raw.githubusercontent.com/TheNathanGirard"
+    $repo_root = "https://saghsharedsvcs.z21.web.core.windows.net/powershell-profile"
 }
 
 # Define the path to the file that stores the last execution time
@@ -136,7 +136,7 @@ function Update-Profile {
     }
     else {
         try {
-            $url = "$repo_root/powershell-profile/main/Microsoft.PowerShell_profile.ps1"
+            $url = "$repo_root/Microsoft.PowerShell_profile.ps1"
             $oldhash = Get-FileHash $PROFILE
             Invoke-RestMethod $url -OutFile "$env:temp/Microsoft.PowerShell_profile.ps1"
             $newhash = Get-FileHash "$env:temp/Microsoft.PowerShell_profile.ps1"
@@ -594,7 +594,7 @@ if (Get-Command -Name "Get-Theme_Override" -ErrorAction SilentlyContinue) {
     Get-Theme_Override;
 }
 else {
-    oh-my-posh init pwsh --config https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/cobalt2.omp.json | Invoke-Expression
+    oh-my-posh init pwsh --config https://saghsharedsvcs.z21.web.core.windows.net/powershell-profile/themes/cobalt2.omp.json | Invoke-Expression
 }
 
 if (Get-Command zoxide -ErrorAction SilentlyContinue) {
